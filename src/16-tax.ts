@@ -14,7 +14,7 @@ export {};
 
 // You are allowed to change only this function
 function calculateSalesTax(tax: number) {
-    return +(Math.round(tax * 21) / 100).toFixed(2);
+    return tax * 0.21;
     //let roundedTax = tax * 21;
     //roundedTax - Math.floor(roundedTax) < 0.5 ? roundedTax = Math.floor(roundedTax) / 100 : roundedTax = Math.ceil(roundedTax) / 100;
     //return roundedTax
