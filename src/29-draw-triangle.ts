@@ -1,3 +1,5 @@
+import { resolveProjectReferencePath } from "typescript";
+
 export {};
 
 /**
@@ -5,7 +7,11 @@ export {};
  *  - https://blog.codeanalogies.com/2017/11/07/javascript-for-loops-explained/
  */
 
-function draw() {}
+function draw(num: number) {
+    for (let i = 1; i < num + 1; ++i) {
+        console.log("*".repeat(i))
+    }
+}
 
 draw(3);
 /* Expected output:
