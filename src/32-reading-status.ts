@@ -18,7 +18,15 @@ const library = [
   }
 ];
 
-const showStatus = () => {};
+const showStatus = (lib: {title: string, author: string, isRead: boolean}[]) => {
+  for (let i = 0; i < lib.length; i++) {
+    let alreadyRed: string = "Already";
+    if (!lib[i].isRead) {
+      alreadyRed = "You still need to"
+    }
+    console.log(`${alreadyRed} read '${lib[i].title}' by ${lib[i].author}.`)
+  }
+};
 
 showStatus(library);
 
