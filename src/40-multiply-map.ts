@@ -8,10 +8,16 @@ export {};
  * and recreate the logic yourself.
  */
 
-const map = () => {};
-
+const map = (nums: number[], func: any) => {
+  let newNums: any[] = []
+  for (let i = 0; i < nums.length; i++) {
+    newNums[i] = func(nums[i])
+  }
+  return newNums
+};
 const numbers = [1, 2, 3];
-const doubled = map(numbers, function(number) {
+
+const doubled = map(numbers, function(number: number) {
   return number * 2;
 });
 console.log(doubled); // Expected result: [2, 4, 6]
