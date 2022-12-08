@@ -8,7 +8,22 @@ export {};
  *  - https://javascript.info/array
  */
 function stringToArray(arr: string[]): string[] {
-    return arr[0].split(" ");
+    //     let resultArr: string[] = []
+    // for (let i = 0; i < arr.length; i++) {
+    //     const names = arr[i];
+    //     const nameParts = names.split(" ");
+    //     resultArr.push(nameParts[0])
+    //     resultArr.push(nameParts[1])
+    // }
+    // return resultArr;
+    let resultArr: string[] = []
+    arr.forEach ((names) => {
+        const nameParts = names.split(" ");
+        resultArr.push(nameParts[0])
+        resultArr.push(nameParts[1])
+    });
+    return resultArr;
+    //return arr[0].split(" ");
 }
 
 console.log(stringToArray(["John Doe"])); // Expected output: ['John', 'Doe']

@@ -22,14 +22,20 @@ export {};
 /*function convertToBRL(price: number): string {
     return (price * 1.4).toFixed(2);
 }*/
+const EXCHANGE_RATE = 1.01;
+enum TO_CURRENCY {
+    ToUSD = 1.4,
+    ToBRL = 6.4
+}
+
 function convertToForeign (price: number, exchangeRate: number): string {
-    return (price * 1.01 * exchangeRate).toFixed(2)
+    return (price * EXCHANGE_RATE * exchangeRate).toFixed(2)
 }
 
 const product = "You don't know JS";
 const price = 12.5;
-const priceInUSD = convertToForeign(price, 1.4);
-const priceInBRL = convertToForeign(price, 6.4);
+const priceInUSD = convertToForeign(price, TO_CURRENCY.ToUSD);
+const priceInBRL = convertToForeign(price, TO_CURRENCY.ToBRL);
 
 console.log("Product: " + product);
 console.log("Price: $" + priceInUSD);

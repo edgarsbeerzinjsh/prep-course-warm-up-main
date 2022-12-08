@@ -1,6 +1,6 @@
 export {};
 
-const repeatString = (word: string, times: number) => {
+const repeatString = (word: string, times: number): string => {
     return word.repeat(times)
 };
 

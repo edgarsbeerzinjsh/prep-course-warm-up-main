@@ -13,7 +13,7 @@ export {};
  */
 
 // You are allowed to change only this function
-function calculateSalesTax(tax: number) {
+function calculateSalesTax(tax: number): number {
     return tax * 0.21;
     //let roundedTax = tax * 21;
     //roundedTax - Math.floor(roundedTax) < 0.5 ? roundedTax = Math.floor(roundedTax) / 100 : roundedTax = Math.ceil(roundedTax) / 100;

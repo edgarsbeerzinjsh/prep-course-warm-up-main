@@ -5,7 +5,16 @@ export {};
  * "Hi, my name is {firstName} {lastName}. I am {age} years old, and work as a {occupation}."
  */
 
-const writers = [
+interface I_Writer {
+  firstName: string;
+  lastName: string;
+  occupation: string;
+  age: number;
+  alive: boolean;
+};
+
+//const writers = [
+const writers: I_Writer[] = [
   {
     firstName: "Virginia",
     lastName: "Woolf",
