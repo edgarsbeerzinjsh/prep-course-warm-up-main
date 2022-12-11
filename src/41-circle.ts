@@ -11,13 +11,37 @@ export {};
  *  - https://www.youtube.com/watch?v=YOlr79NaAtQ (What is THIS in JavaScript? in 100 seconds)
  */
 
-function Circle(radius) {
+/*
+class Circle{
+  private radius: number;
+
+  constructor(radius: number) {
+      this.radius = radius;
+
+  }
+
+  area(this: Circle){
+     return this.radius ** 2 * Math.PI
+     }
+
+  perimeter(this: Circle){
+    return this.radius * 2 * Math.PI
+    }
+ }
+*/
+
+function Circle(this: any, radius: number) {
   this.radius = radius;
-  this.area = () => Math.PI * radius ** 2;
-  this.perimeter = () => Math.PI * radius * 2;
+  this.area = () => {
+    return Math.PI * this.radius ** 2
+    }
+  this.perimeter = () => {
+    return Math.PI * this.radius * 2
+  }
 }
 
-const c = new Circle(3);
+//const c = new Circle(3);
+const c = new (Circle as any)(3);
 console.log("Area =", c.area()); // Expected output: Area = 28.27
 console.log("Perimeter =", c.perimeter()); // Expected output: Perimeter = 18.85
 
