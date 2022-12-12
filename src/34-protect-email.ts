@@ -3,8 +3,8 @@ export {};
 /**
  * Create a function protectEmail which hides some symbols of the email
  */
-const protectEmail = (email: string) => {
-    let makeTwo = email.split("@");
+const protectEmail = (email: string): string => {
+    const makeTwo = email.split("@");
     return makeTwo[0].slice(0, -3).slice(0, 3).concat("...@",makeTwo[1])
 }
 

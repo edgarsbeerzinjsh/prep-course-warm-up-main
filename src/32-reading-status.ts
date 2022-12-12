@@ -1,5 +1,11 @@
 export {};
+// interface Book {
+//   title: string,
+//   author: string,
+//   isRead: boolean
+// }
 
+//const library: Book [] = [
 const library = [
   {
     title: "Bill Gates",
@@ -18,7 +24,15 @@ const library = [
   }
 ];
 
-const showStatus = (lib: {title: string, author: string, isRead: boolean}[]) => {
+//const showStatus = (listOfBooks: Book[]): void => {
+  //listOfBooks.forEach(book => {
+    //if(book.isRead) {
+      //console.log(`Already read '${book.title}' by ${book.author}.`)
+    //} else {
+      //console.log(`You still need to read '${book.title}' by ${book.author}.`)
+    //}
+  //})
+const showStatus = (lib: {title: string, author: string, isRead: boolean}[]): void => {
   for (let i = 0; i < lib.length; i++) {
     let alreadyRed: string = "Already";
     if (!lib[i].isRead) {
